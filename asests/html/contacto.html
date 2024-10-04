@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav> 
+        <ul>
+            <li><a href="/index.html"    ><box-icon name='home-alt-2'></box-icon>Home</a></li>
+            <li><a href="productos.html" ><box-icon name='customize'></box-icon>Productos</a></li>
+            <li><a href="contacto.html"  ><box-icon type='solid' name='contact'></box-icon>Contactos</a></li>
+        </ul>
+    </nav>
+    <header>
+
+    </header>
+   <main>
+    <aside>
+        <h2>Slider</h2>
+        <section>
+            <h3>Menu de items</h3>
+        </section>
+        <section>
+            <div>
+                <ul>
+                    <li><a href="#">Fotos</a></li>
+                    <li><a href="#">videos</a></li>
+                    <li><a href="#">clases</a></li>
+                 
+                </ul>
+            </div>
+        </section>
+    </aside>
+    <section>
+        <article>
+            <!-- modify this form HTML and place wherever you want your form -->
+            <form id="form"
+            action="https://formspree.io/f/xwpkepyk"
+            method="POST"
+            >
+            <label>
+            Your email:
+            <input type="email" name="email">
+            </label>
+            <label>
+            Your message:
+            <textarea name="message"></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+            </form>
+        </article>
+    </section>
+    <section>
+        <article></article>
+    </section>
+
+
+    <footer></footer>
+   </main>
+   <script>
+    // Selecciona el formulario y agrega un evento "submit"
+    document.getElementById("form").addEventListener("submit", function(event) {
+        // Evita la redirección predeterminada
+        event.preventDefault();
+        // Aquí puedes agregar lógica adicional, como enviar el formulario con fetch o AJAX
+        console.log("Formulario enviado, pero sin redirección.");
+
+
+
+
+
+
+    });
+</script>
+</body>
+</html>
