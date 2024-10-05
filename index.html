@@ -27,13 +27,17 @@
         main {
             flex: 1;
         }
+        .mm{
+            backdrop-filter: blur(10px);
+        }
     </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
-
+<header class="shadow-md">
+    
     <!-- Navbar con logo de Argentina -->
-    <nav class="bg-blue-600 p-4">
+    <nav class="bg-blue-600 p-4 shadow-md">
         <ul class="flex justify-around items-center text-white">
             <li>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg" alt="Argentina"
@@ -56,30 +60,65 @@
             </li>
         </ul>
     </nav>
+</header>
 
     <!-- Main Content -->
-    <main class="container mx-auto my-10 p-5">
+    <main class="container mx-auto my-10 p-1">
+        <section class="rounded-lg shadow-md mb-2 p-6 bg-gray-400 ">
+            <article class="rounded-lg  mb-2 ml-6 rounded-lg  flex  flex-wrap lg:grid-cols-3 xl:grid-cols-4 gap-1">
+                <video src="https://cdn.pixabay.com/video/2024/01/21/197564-905005767_large.mp4"  width="340" height="360" controls autoplay>
+                    <!-- Las fuentes se agregarán desde JavaScript -->
+                    <track label="Español" kind="subtitles" srclang="es" src="subtitulos-es.vtt" default>
+                    <track label="Inglés" kind="subtitles" srclang="en" src="subtitulos-en.vtt">
+                    <track label="Francés" kind="subtitles" srclang="fr" src="subtitulos-fr.vtt"> 
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                <br>
+                <video src="https://cdn.pixabay.com/video/2023/11/26/190776-888535446_large.mp4"  width="340" height="360" controls autoplay>
+                    <!-- Las fuentes se agregarán desde JavaScript -->
+                    <track label="Español" kind="subtitles" srclang="es" src="subtitulos-es.vtt" default>
+                    <track label="Inglés" kind="subtitles" srclang="en" src="subtitulos-en.vtt">
+                    <track label="Francés" kind="subtitles" srclang="fr" src="subtitulos-fr.vtt"> 
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                <br>
+                <video src="https://cdn.pixabay.com/video/2024/09/21/232561_large.mp4"  width="340" height="360" controls autoplay>
+                    <!-- Las fuentes se agregarán desde JavaScript -->
+                    <track label="Español" kind="subtitles" srclang="es" src="subtitulos-es.vtt" default>
+                    <track label="Inglés" kind="subtitles" srclang="en" src="subtitulos-en.vtt">
+                    <track label="Francés" kind="subtitles" srclang="fr" src="subtitulos-fr.vtt"> 
+                    <track label="Italiano" kind="subtitles" srclang="fr" src="subtitulos-fr.vtt"> 
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+
+
+            </article>
+        </section>
+
+
+
+
         <section class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur eius earum ipsam voluptatem iure deleniti eum distinctio, delectus maxime libero provident vitae a optio similique! Doloribus quas explicabo temporibus officiis?</h2>
+            <h2>Tres videos acorde a lo q nesesito de manera free </h2>
         </section><br>
         <!-- Articles Section agrupados de 4 a 6 por fila -->
         <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <article class="bg-white p-6 rounded-lg shadow-md mb-6 cursor-pointer" data-bs-toggle="modal" data-bs-target="#articleModal" onclick="openModal('Título del Artículo 1', 'Contenido del artículo 1.')">
+            <article class="bg-white p-6 rounded-lg shadow-md mb-2 cursor-pointer" data-bs-toggle="modal" data-bs-target="#articleModal" onclick="openModal('Título del Artículo 1', 'Contenido del artículo 1.')">
                 <h2 class="text-xl font-bold mb-4">Artículo 1</h2>
                 <p class="text-pink-500">Contenido del artículo 1.</p>
             </article>
 
-            <article class="bg-white p-6 rounded-lg shadow-md mb-6 cursor-pointer" data-bs-toggle="modal" data-bs-target="#articleModal" onclick="openModal('Título del Artículo 2', 'Contenido del artículo 2.')">
-                <h2 class="text-xl font-bold mb-4">Artículo 2</h2>
+            <article class="bg-white p-6 rounded-lg shadow-md mb-2 cursor-pointer" data-bs-toggle="modal" data-bs-target="#articleModal" onclick="openModal('Título del Artículo 2', 'Contenido del artículo 2.')">
+                <h2 class="text-xl font-bold mb-2">Artículo 2</h2>
                 <p class="text-pink-500">Contenido del artículo 2.</p>
             </article>
 
-            <article class="bg-white p-6 rounded-lg shadow-md mb-6 cursor-pointer" data-bs-toggle="modal" data-bs-target="#articleModal" onclick="openModal('Título del Artículo 3', 'Contenido del artículo 3.')">
+            <article class="bg-white p-6 rounded-lg shadow-md mb-2 cursor-pointer" data-bs-toggle="modal" data-bs-target="#articleModal" onclick="openModal('Título del Artículo 3', 'Contenido del artículo 3.')">
                 <h2 class="text-xl font-bold mb-4">Artículo 3</h2>
                 <p class="text-pink-500">Contenido del artículo 3.</p>
             </article>
 
-            <article class="bg-white p-6 rounded-lg shadow-md mb-6 cursor-pointer" data-bs-toggle="modal" data-bs-target="#articleModal" onclick="openModal('Título del Artículo 4', 'Contenido del artículo 4.')">
+            <article class="bg-white p-6 rounded-lg shadow-md mb-2 cursor-pointer" data-bs-toggle="modal" data-bs-target="#articleModal" onclick="openModal('Título del Artículo 4', 'Contenido del artículo 4.')">
                 <h2 class="text-xl font-bold mb-4">Artículo 4</h2>
                 <p class="text-pink-500">Contenido del artículo 4.</p>
             </article>
@@ -94,12 +133,17 @@
                 <p class="text-pink-500">Contenido del artículo 6.</p>
             </article>
         </section>
+
+
+
+
+
     </main>
 
   
 
     <!-- Modal -->
-    <div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
+    <div class="modal fade mm" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -124,6 +168,7 @@
             document.getElementById('articleModalLabel').innerText = title;
             document.getElementById('modalContent').innerText = content;
         }
+
     </script>
 </body>
 
