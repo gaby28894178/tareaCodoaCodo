@@ -1,80 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Boxicons CDN -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+    <style>
+        /* Asegurar que el footer esté al final de la página */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
 </head>
-<body>
-    <nav> 
-        <ul>
-            <li><a href="/index.html"    ><box-icon name='home-alt-2'></box-icon>Home</a></li>
-            <li><a href="productos.html" ><box-icon name='customize'></box-icon>Productos</a></li>
-            <li><a href="contacto.html"  ><box-icon type='solid' name='contact'></box-icon>Contactos</a></li>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar con logo de Argentina -->
+    <nav class="bg-blue-600 p-4">
+        <ul class="flex justify-around items-center text-white">
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg" alt="Argentina"
+                    class="h-6 w-8 mr-2">
+            </li>
+            <li>
+                <a href="/index.html" class="flex items-center" rel="noopener noreferrer">
+                    <box-icon name='home-alt-2' class="mr-2" color="white"></box-icon>Home
+                </a>
+            </li>
+            <li>
+                <a href="/asests/html/productos.html" class="flex items-center" rel="noopener noreferrer">
+                    <box-icon name='customize' class="mr-2" color="white"></box-icon>Productos
+                </a>
+            </li>
+            <li>
+                <a href="/asests/html/contacto.html" class="flex items-center" rel="noopener noreferrer">
+                    <box-icon type='solid' name='contact' class="mr-2" color="white"></box-icon>Contactos
+                </a>
+            </li>
         </ul>
     </nav>
-    <header>
 
-    </header>
-   <main>
-    <aside>
-        <h2>Slider</h2>
-        <section>
-            <h3>Menu de items</h3>
+    <!-- Main Content -->
+    <main class="container mx-auto my-10 p-5">
+        <!-- Articles Section agrupados de 4 a 6 por fila -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <article class="bg-white p-6 rounded-lg shadow-md mb-6">
+                <h2 class="text-xl font-bold mb-4">Artículo 1</h2>
+                <p>Contenido del artículo 1.</p>
+            </article>
+
+            <article class="bg-white p-6 rounded-lg shadow-md mb-6">
+                <h2 class="text-xl font-bold mb-4">Artículo 2</h2>
+                <p>Contenido del artículo 2.</p>
+            </article>
+
         </section>
+
+        
+
         <section>
-            <div>
-                <ul>
-                    <li><a href="#">Fotos</a></li>
-                    <li><a href="#">videos</a></li>
-                    <li><a href="#">clases</a></li>
-                 
-                </ul>
-            </div>
+            <article class="bg-white p-6 rounded-lg shadow-md mb-6">
+                <!-- Modify this form HTML and place wherever you want your form -->
+                <form id="form"
+                      action="https://formspree.io/f/xwpkepyk"
+                      method="POST"
+                      class="space-y-4"
+                >
+                    <!-- Email Field -->
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">Your email:</label>
+                        <input type="email" name="email" id="email"
+                               class="form-control w-full border border-gray-300 p-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                               placeholder="Enter your email" required>
+                    </div>
+        
+                    <!-- Message Field -->
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">Your message:</label>
+                        <textarea name="message" id="message"
+                                  class="form-control w-full border border-gray-300 p-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                  rows="4" placeholder="Type your message here..." required></textarea>
+                    </div>
+        
+                    <!-- Submit Button -->
+                    <div class="text-right">
+                        <button type="submit"
+                                class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md" id="btn">
+                            Enviar 
+                        </button>
+                    </div>
+                </form>
+            </article>
         </section>
-    </aside>
-    <section>
-        <article>
-            <!-- modify this form HTML and place wherever you want your form -->
-            <form id="form"
-            action="https://formspree.io/f/xwpkepyk"
-            method="POST"
-            >
-            <label>
-            Your email:
-            <input type="email" name="email">
-            </label>
-            <label>
-            Your message:
-            <textarea name="message"></textarea>
-            </label>
-            <!-- your other form fields go here -->
-            <button type="submit">Send</button>
-            </form>
-        </article>
-    </section>
-    <section>
-        <article></article>
-    </section>
+        
+    </main>
 
+    <!-- Footer fijo al final de la pantalla -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-auto">
+        <p>&copy; 2024 Tu Compañía</p>
+    </footer>
+   
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('btn');
+    
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+               from(e);
+                const message = document.getElementById('message').value="";
+                const email = document.getElementById('email').value="";
 
-    <footer></footer>
-   </main>
-   <script>
-    // Selecciona el formulario y agrega un evento "submit"
-    document.getElementById("form").addEventListener("submit", function(event) {
-        // Evita la redirección predeterminada
-        event.preventDefault();
-        // Aquí puedes agregar lógica adicional, como enviar el formulario con fetch o AJAX
-        console.log("Formulario enviado, pero sin redirección.");
+            });
+        });
+    
+        function from(e) {
+           
+            console.log('Formulario enviado');
+            
+         
+            Swal.fire({
+                title: '¡Éxito!',
+                text: '¡Formulario enviado exitosamente!',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            });
+        }
+    </script>
+    
 
-
-
-
-
-
-    });
-</script>
 </body>
+
 </html>
+   
