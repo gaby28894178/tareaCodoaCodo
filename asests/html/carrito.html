@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <header class="shadow-md">
+        <nav class="bg-blue-600 p-4 shadow-md">
+            <ul class="flex justify-around items-center text-white">
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg" alt="Argentina" class="h-6 w-8 mr-2"></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="contacto.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto my-10 p-5">
+        <h1 class="text-2xl font-bold mb-4">Carrito de Compras</h1>
+        <p>Aquí están los productos que has agregado al carrito:</p>
+        
+        <!-- Contenedor para los productos en el carrito -->
+        <section id="carrito-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Los productos se agregarán aquí dinámicamente -->
+        </section>
+
+        <div class="mt-6">
+            <button id="vaciar-carrito" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700">Vaciar Carrito</button>
+            <button id="finalizar-compra" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 ml-4">Finalizar Compra</button>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-4 mt-auto">
+        <p>&copy; 2024 Tu Compañía</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const carritoContainer = document.getElementById("carrito-container");
+
+            // Obtener los productos del carrito desde localStorage
+            const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+            if (carrito.length === 0) {
+                carritoContainer.innerHTML = "<p>No tienes productos en el carrito.</p>";
+            } else {
+                carrito.forEach(producto => {
+                    const productoEnCarrito = document.createElement("div");
+                    productoEnCarrito.className = "bg-white p-6 rounded-lg shadow-md";
+                    productoEnCarrito.innerHTML = `
+                        <h3 class="text-xl font-bold mb-2">${producto.nombre}</h3>
+                        <p>${producto.descripcion}</p>
+                        <p class="text-lg font-semibold text-gray-700 mb-4">$${producto.precio}</p>
+                    `;
+                    carritoContainer.appendChild(productoEnCarrito);
+                });
+            }
+
+            // Función para vaciar el carrito
+            document.getElementById("vaciar-carrito").addEventListener("click", () => {
+                localStorage.removeItem("carrito");
+                carritoContainer.innerHTML = "<p>No tienes productos en el carrito.</p>";
+            });
+
+            // Función para finalizar la compra (por ahora solo muestra un mensaje)
+            document.getElementById("finalizar-compra").addEventListener("click", () => {
+                if (carrito.length === 0) {
+                    alert("Tu carrito está vacío.");
+                } else {
+                    alert("Gracias por tu compra.");
+                    localStorage.removeItem("carrito"); // Vaciar carrito después de la compra
+                    carritoContainer.innerHTML = "<p>No tienes productos en el carrito.</p>";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

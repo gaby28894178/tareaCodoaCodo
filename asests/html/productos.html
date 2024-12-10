@@ -4,25 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- Boxicons CDN -->
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-    <!-- Tailwind CSS CDN -->
+    <title>Productos</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Bootstrap CSS -->
- 
-
     <style>
-        /* Asegurar que el footer esté al final de la página */
         body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
-
         main {
             flex: 1;
         }
@@ -30,76 +19,32 @@
 </head>
 
 <body class="bg-gray-100 text-gray-800">
-
     <header class="shadow-md">
-
-        <!-- Navbar con logo de Argentina -->
         <nav class="bg-blue-600 p-4 shadow-md">
             <ul class="flex justify-around items-center text-white">
-                <li>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg" alt="Argentina"
-                    class="h-6 w-8 mr-2">
-            </li>
-            <li>
-                <a href="/index.html" class="flex items-center" rel="noopener noreferrer">
-                    <box-icon name='home-alt-2' class="mr-2" color="white"></box-icon>Home
-                </a>
-            </li>
-            <li>
-                <a href="/asests/html/productos.html" class="flex items-center" rel="noopener noreferrer">
-                    <box-icon name='customize' class="mr-2" color="white"></box-icon>Productos
-                </a>
-            </li>
-            <li>
-                <a href="/asests/html/contacto.html" class="flex items-center" rel="noopener noreferrer">
-                    <box-icon type='solid' name='contact' class="mr-2" color="white"></box-icon>Contactos
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg" alt="Argentina" class="h-6 w-8 mr-2"></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="contacto.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Main Content -->
     <main class="container mx-auto my-10 p-5">
-        <!-- Articles Section agrupados de 4 a 6 por fila -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <article class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <h2 class="text-xl font-bold mb-4">Artículo 1</h2>
-                <p>Contenido del artículo 1.</p>
-            </article>
+        <h1 class="text-2xl font-bold mb-4">Productos</h1>
+        <p>Seleccione el producto que desea llevar:</p>
+        <section id="productos-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></section>
 
-            <article class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <h2 class="text-xl font-bold mb-4">Artículo 2</h2>
-                <p>Contenido del artículo 2.</p>
-            </article>
-
-            <article class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <h2 class="text-xl font-bold mb-4">Artículo 3</h2>
-                <p>Contenido del artículo 3.</p>
-            </article>
-
-            <article class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <h2 class="text-xl font-bold mb-4">Artículo 4</h2>
-                <p>Contenido del artículo 4.</p>
-            </article>
-
-            <article class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <h2 class="text-xl font-bold mb-4">Artículo 5</h2>
-                <p>Contenido del artículo 5.</p>
-            </article>
-
-            <article class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <h2 class="text-xl font-bold mb-4">Artículo 6</h2>
-                <p>Contenido del artículo 6.</p>
-            </article>
-        </section>
     </main>
 
-    <!-- Footer fijo al final de la pantalla -->
     <footer class="bg-gray-800 text-white text-center p-4 mt-auto">
         <p>&copy; 2024 Tu Compañía</p>
     </footer>
+    <!-- <script src="../../asests/js/productos.js" type="module"></script> -->
 
+    <script src="../../js/productos.js" type="module" defer></script>
+    <script src="../js/main.js" type="module" defer></script>
 </body>
 
 </html>
