@@ -1,3 +1,2 @@
-base de datos del back
-DATABASE_URL=postgres://postgres:root@127.0.0.1:5432/<nombre_db>
-
+enn este casi usamos  dos archivos js para crear la base de datos mokeada 
+y el otro para escuachar la carga de el sitio  y manipular los productos pór medio de una funcion q los agrega a una card  con un boton  el cual al hacer clic en el mismio  lo enviamos a el local storage con parseo a json  para luego recuperarlos desde mi carrito  al cual le agrege el boton limpiar y finalizar 
